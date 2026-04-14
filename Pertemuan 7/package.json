@@ -1,0 +1,21 @@
+{
+  "name": "test-mocha-indra",
+  "version": "1.0.0",
+  "description": "project playground test mocha",
+  "type": "module",
+  "scripts": {
+    "test": "mocha tests --recursive --timeout 5000 --reporter spec",
+    "test-report-html": "mocha tests --recursive --timeout 5000 --reporter mocha-simple-html-reporter --reporter-options output=./reports/test-report.html",
+    "test-report-json": "mocha tests --recursive --timeout 5000 --reporter json > ./reports/test-report.json"
+  },
+  "dependencies": {
+    "ajv": "8.12.0",
+    "dotenv": "^17.4.2",
+    "node-fetch": "^3.3.1"
+  },
+  "devDependencies": {
+    "chai": "^4.3.8",
+    "mocha": "^11.7.5",
+    "mocha-simple-html-reporter": "^2.0.0"
+  }
+}
