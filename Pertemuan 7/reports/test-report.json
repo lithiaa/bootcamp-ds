@@ -1,0 +1,90 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 4,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-04-14T15:15:19.446Z",
+    "end": "2026-04-14T15:15:20.526Z",
+    "duration": 1080
+  },
+  "tests": [
+    {
+      "title": "READ - Get list of users",
+      "fullTitle": "Reqres API Tests Suite READ - Get list of users",
+      "file": "D:\\Bootcamp\\Pertemuan 7\\tests\\api\\reqres.test.js",
+      "duration": 213,
+      "currentRetry": 0,
+      "speed": "slow",
+      "err": {}
+    },
+    {
+      "title": "CREATE - Create a new user",
+      "fullTitle": "Reqres API Tests Suite CREATE - Create a new user",
+      "file": "D:\\Bootcamp\\Pertemuan 7\\tests\\api\\reqres.test.js",
+      "duration": 415,
+      "currentRetry": 0,
+      "speed": "slow",
+      "err": {}
+    },
+    {
+      "title": "UPDATE - Update a user",
+      "fullTitle": "Reqres API Tests Suite UPDATE - Update a user",
+      "file": "D:\\Bootcamp\\Pertemuan 7\\tests\\api\\reqres.test.js",
+      "duration": 228,
+      "currentRetry": 0,
+      "speed": "slow",
+      "err": {}
+    },
+    {
+      "title": "DELETE - Delete a user",
+      "fullTitle": "Reqres API Tests Suite DELETE - Delete a user",
+      "file": "D:\\Bootcamp\\Pertemuan 7\\tests\\api\\reqres.test.js",
+      "duration": 222,
+      "currentRetry": 0,
+      "speed": "slow",
+      "err": {}
+    }
+  ],
+  "pending": [],
+  "failures": [],
+  "passes": [
+    {
+      "title": "READ - Get list of users",
+      "fullTitle": "Reqres API Tests Suite READ - Get list of users",
+      "file": "D:\\Bootcamp\\Pertemuan 7\\tests\\api\\reqres.test.js",
+      "duration": 213,
+      "currentRetry": 0,
+      "speed": "slow",
+      "err": {}
+    },
+    {
+      "title": "CREATE - Create a new user",
+      "fullTitle": "Reqres API Tests Suite CREATE - Create a new user",
+      "file": "D:\\Bootcamp\\Pertemuan 7\\tests\\api\\reqres.test.js",
+      "duration": 415,
+      "currentRetry": 0,
+      "speed": "slow",
+      "err": {}
+    },
+    {
+      "title": "UPDATE - Update a user",
+      "fullTitle": "Reqres API Tests Suite UPDATE - Update a user",
+      "file": "D:\\Bootcamp\\Pertemuan 7\\tests\\api\\reqres.test.js",
+      "duration": 228,
+      "currentRetry": 0,
+      "speed": "slow",
+      "err": {}
+    },
+    {
+      "title": "DELETE - Delete a user",
+      "fullTitle": "Reqres API Tests Suite DELETE - Delete a user",
+      "file": "D:\\Bootcamp\\Pertemuan 7\\tests\\api\\reqres.test.js",
+      "duration": 222,
+      "currentRetry": 0,
+      "speed": "slow",
+      "err": {}
+    }
+  ]
+}
