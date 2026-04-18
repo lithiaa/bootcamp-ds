@@ -1,0 +1,119 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-04-18T12:01:23.499Z",
+    "end": "2026-04-18T12:01:27.479Z",
+    "duration": 3980,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "669fb36b-98a9-4842-a93a-ec2e2b3b00ec",
+      "title": "",
+      "fullFile": "D:\\Bootcamp\\Pertemuan 9\\test\\test-sauce.js",
+      "file": "\\test\\test-sauce.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "ef9beb38-4f49-4537-814c-a8041d2c94ea",
+          "title": "Sauce Labs Sample Test",
+          "fullFile": "D:\\Bootcamp\\Pertemuan 9\\test\\test-sauce.js",
+          "file": "\\test\\test-sauce.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Login with valid credentials",
+              "fullTitle": "Sauce Labs Sample Test Login with valid credentials",
+              "timedOut": false,
+              "duration": 2172,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const options = new chrome.Options();\noptions.addArguments(\"--incognito\");\ndriver = await new Builder()\n  .forBrowser(\"chrome\")\n  .setChromeOptions(options)\n  .build();\ntry {\n  await driver.get(\"https://www.saucedemo.com/\");\n  let inputUsername = await driver.findElement(\n    By.xpath(\"//input[@data-test='username']\"),\n  );\n  await inputUsername.sendKeys(\"standard_user\");\n  let inputPassword = await driver.findElement(\n    By.xpath(\"//input[@data-test='password']\"),\n  );\n  await inputPassword.sendKeys(\"secret_sauce\");\n  let loginButton = await driver.findElement(\n    By.xpath(\"//input[@data-test='login-button']\"),\n  );\n  await loginButton.click();\n  const cartLink = await driver.wait(\n    until.elementLocated(By.xpath('//*[@id=\"shopping_cart_container\"]')),\n    10000,\n  );\n  await driver.wait(until.elementIsVisible(cartLink), 10000);\n  assert.ok(\n    await cartLink.isDisplayed(),\n    \"Login failed: Cart link not found\",\n  );\n} finally {\n  await driver.quit();\n}",
+              "err": {},
+              "uuid": "0d950451-8468-4922-ae96-94e1cd2d7245",
+              "parentUUID": "ef9beb38-4f49-4537-814c-a8041d2c94ea",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Sort by name A to Z",
+              "fullTitle": "Sauce Labs Sample Test Sort by name A to Z",
+              "timedOut": false,
+              "duration": 1798,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const options = new chrome.Options();\noptions.addArguments(\"--incognito\");\ndriver = await new Builder()\n  .forBrowser(\"chrome\")\n  .setChromeOptions(options)\n  .build();\ntry {\n  await driver.get(\"https://www.saucedemo.com/\");\n  let inputUsername = await driver.findElement(\n    By.xpath(\"//input[@data-test='username']\"),\n  );\n  await inputUsername.sendKeys(\"standard_user\");\n  let inputPassword = await driver.findElement(\n    By.xpath(\"//input[@data-test='password']\"),\n  );\n  await inputPassword.sendKeys(\"secret_sauce\");\n  let loginButton = await driver.findElement(\n    By.xpath(\"//input[@data-test='login-button']\"),\n  );\n  await loginButton.click();\n  const dropdownLocator = By.css(\"select.product_sort_container\");\n  await driver.wait(until.elementLocated(dropdownLocator), 5000);\n  let sortDropdown = await driver.findElement(dropdownLocator);\n  await driver.wait(until.elementIsVisible(sortDropdown), 5000);\n  await sortDropdown.click();\n  let optionAtoZ = await driver.findElement(\n    By.xpath('//option[@value=\"az\"]'),\n  );\n  await optionAtoZ.click();\n  const selectedValue = await sortDropdown.getAttribute(\"value\");\n  assert.strictEqual(selectedValue, \"az\");\n} finally {\n  await driver.quit();\n}",
+              "err": {},
+              "uuid": "8c8bad98-dcf1-41ed-93d8-2ec60f0f11b1",
+              "parentUUID": "ef9beb38-4f49-4537-814c-a8041d2c94ea",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "0d950451-8468-4922-ae96-94e1cd2d7245",
+            "8c8bad98-dcf1-41ed-93d8-2ec60f0f11b1"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 3970,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 60000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 60000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "11.7.5"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.3.2"
+    }
+  }
+}
