@@ -1,0 +1,20 @@
+{
+  "name": "selenium-mocha-indra",
+  "version": "1.0.0",
+  "description": "Selenium WebDriver tests using Mocha framework",
+  "scripts": {
+    "test": "mocha test --timeout 60000",
+    "test-recursive": "mocha test/specs --recursive --timeout 60000",
+    "test-parallel": "mocha test/specs --recursive --timeout 60000 --parallel",
+    "test-report-mocha": "mocha test/specs --recursive --timeout 60000 --reporter mochawesome"
+  },
+  "dependencies": {
+    "selenium-webdriver": "4.17.0",
+    "pixelmatch": "^7.1.0",
+    "pngjs": "^6.0.0"
+  },
+  "devDependencies": {
+    "mocha": "^11.7.5",
+    "mochawesome": "^7.1.3"
+  }
+}
